@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
+import { Provider } from 'react-redux';
+
+import RepositoryList from './components/RepositoryList';
+
+import store from './store';
 
 class App extends Component {
-  componentDidMount() {
-
-  }
+  componentDidMount() {}
 
   render() {
     return (
-      <div>
-        Hello
-      </div>
+      <Provider store={store}>
+        <RepositoryList />
+      </Provider>
     );
   }
 }
